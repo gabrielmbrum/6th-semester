@@ -25,7 +25,7 @@ variáveis permanentes são inicializadas antes de executar a primeira chamada a
 
 os procedimentos do monitor são chamados assim: `call mname.opname(args)`
 
-17996675069 me liga bb
+> 17996675069 me liga bb
 
 por definição, procedimentos são executados em exclusão mútua, obtida implicitamente na implementação do TAD (Tipo Abstrato de Dados) monitor
 
@@ -54,7 +54,7 @@ minrank(cv);         // retorna o rank do processo na frente da fila
 ### políticas de liberação (*signal*)
 
 ***Signal and Continue (SC)***
-- o procedimento que fez a chamada continua a ser executado (processo não sofre preempção - troca de proc. na CPU)
+- o procedimento que fez a chamada continua a ser executado (processo não sofre preempção - troca de proc. na CPU feita pelo SO)
 
 ***Signal and Wait (SW)***
 - o procedimento que fez a chamada cede a execução para o processo que foi liberado
@@ -102,3 +102,4 @@ monitor FIFOSemaphore{
 	}
 }
 ```
+
