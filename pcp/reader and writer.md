@@ -1,4 +1,7 @@
-
+### assuntos da aula
+- await
+- semáforos
+- monitor
 ### comando *await*
 
 utilizado para abstrair condições de exclusão mútuae sincronismo, ele não existe de fato em alguma linguagem de programação, é apenas uma abstração.
@@ -187,3 +190,45 @@ process Reader[i=1 to M] {
 		}
 	}
 }
+```
+
+ai que não sei oq não sei oq lá, linha pra cacete e bla bla bla
+
+simplesmente
+**receba**
+os
+**monitores**
+
+```
+monitor RW_Controller{
+	int nr = 0, nw = 0;
+	cond OK to read, OK to write;
+	
+	procedure request_read() {
+			while (nw > 0)
+				wait(OK to read);
+			nr = nr + 1;
+	}
+	
+	procedure release_read() {
+		nr = nr - 1;
+		if (nr == 0) signal(OK to write);	
+	}
+	
+	procedure request_write() {
+		while (nr > 0 || nw > 0)
+			wait(OK to write);
+		nw = nw + 1;	
+	}
+
+	procedure release_write() {
+		nw = nw - 1;
+		signal(OK to write);
+		signal_all(OK to read);
+	}
+}
+```
+
+esta solução ainda está com starvation, porém é bem mais simples a adaptação do que com semáforos
+
+dependendo da política, SC ou SW, as coisas mudam...
