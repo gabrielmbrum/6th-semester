@@ -9,3 +9,6 @@ solução próxima da raiz => BFS
 
 solução da estrutura completa => DFS
 
+## estudos 
+
+estudar sobre BFS, DFS, bitset e .cpp
