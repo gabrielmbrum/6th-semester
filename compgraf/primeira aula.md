@@ -1,12 +1,4 @@
-
-### datas
-
-23/10 - prova
-após isso, 3 dias de seminários seguidos
-
-média = (P + S +T)/3
-
----
+# aula 01
 ### linha do tempo
 
 1886 - início do CRT (Cathode Ray Tube)
@@ -52,13 +44,17 @@ média = (P + S +T)/3
 1992 - padronização de pacotes gráficos (OpenGL)
 
 ---
-### computação gráfica (hoje)
+### computação gráfica
 
 é a interseção de três áreas:
 - sintese de imagens
+	- objetos criados pelo computador 
 - processamento de imagens
+	- visa melhorar as características visuais da imagem
 - análise de imagens
+	- obter características dos componentes de uma imagem
 
+---
 ### OpenGL - Graphics LIbrary
 
 a interface entre o software e o hardware gráfico é feita através de procedimentos e funções 
@@ -74,42 +70,55 @@ a interface entre o software e o hardware gráfico é feita através de procedim
 	- somente x e y
 	- ex.: paint
 
+---
 ### tecnologia CRT
 
-técnica da esquerda para direita e de cima para baixo
-- assim, poderia se reduzir pela metade o FPS e o olho humano não perceberia a diferença
+técnica da esquerda para direita e de cima para baixo, assim poderia se reduzir pela metade o FPS e o olho humano não perceberia a diferença
 
-o pixel: medidada admensional (sem tamanho físico definido, é definido pela resolução do dispositivo) -> isto afeta a qualidade da imagem
+a quantidade de informação é medida em pixel
 
-**qualidade da imagem**
-influenciada pelo dot pitch, o qual, para manter a qualidade, deve ser no máximo de 0.28mm
+**pixel:** medida adimensional (sem tamanho físico definido, é definido pela resolução do dispositivo) -> isto afeta a qualidade da imagem
 
-### LCD (Liquid Crystal Display)
+usando a resolução máxima -> equivalente a uma unidade física do monitor
+resolução menor que a máxima -> composto por mais de um ponto 
 
-### Plasma
-
-### LED
+**qualidade da imagem:** influenciada pelo dot pitch, o qual, para manter a qualidade, deve ser no máximo de 0.28mm (mais pontos por polegada -> melhor a resolução)
 
 ---
-### Bibliografia
+### tecnologia LCD (Liquid Crystal Display)
 
-Computação Gráfica: Teoria e Prática
+duas lâminas polarizadas (uma na horizontal e outra na vertical) que tem uma camada de cristal líquido entre elas, para orientar a luz e definir as variações de intensidade
+
+___
+### tecnologia plasma
+
+camada com cápsulas de fósforo vermelho, verde e azul (essas cápsulas contém ganes: neônio e xenônio)
+eletrodos emites estímulos que transformar o gás em plasma
 
 ---
+# aula 07
 
-### Modelos de Cores
+>aula de PI
+### modelos de cores
 
 **colorimetria**
-quantificação das cores e padronização de como enxergamos
+- quantificação das cores e padronização de como enxergamos
 
 **sistema CIE**
+- utilizado para descrever a cor
+- padronização de iluminantes e observadores
+- fontes: luz incandescentes (A), luz solar (B) e luz do dia (C)
 
 **cor**
-modelo XYZ, desenvolvido pela CIE
-resposta espectral
+- pode ser definida pela cromaticidade
+- modelo XYZ ou CIE, desenvolvido pela CIE
+	- baseado na resposta espectral
+	- experimento com 20 indivíduos
 
 **diagrama de cromaticidade**
-gama de cores "Gamut"
+- composição de cores em função de $x$ e $y$
+- 
+- gama de cores "Gamut"
 
 *resumindo*
 
@@ -157,3 +166,11 @@ técninca atinge uma escala mais ampla de realce
 - parametro aplha define coisas como transparencia e tals (deixa "frufru")
 
 *glutMainLoop()*
+
+---
+
+compilação dos códigos
+
+■ sudo apt update
+■ sudo apt install freeglut3-dev
+○ gcc <fonte.c> -o <fonte> -lglut -lGL -lGLU –lm

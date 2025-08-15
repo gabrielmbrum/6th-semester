@@ -16,4 +16,5 @@ $0 <= artefato <= 2,0$
 $média = (P + S +T)/3$
 
 23/10 - prova
-após isso, 3 dias de seminários seguidos
+
+seminário - 30/10 06 e 13/11
