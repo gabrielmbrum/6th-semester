@@ -117,7 +117,6 @@ eletrodos emites estímulos que transformar o gás em plasma
 
 **diagrama de cromaticidade**
 - composição de cores em função de $x$ e $y$
-- 
 - gama de cores "Gamut"
 
 *resumindo*
@@ -128,29 +127,98 @@ distinção entre cores, considera:
 - cromaticidade: matiz e saturação tomadas juntas
 
 percepção de cores
+- brilho: quantidade de luz sobre a área
+- luminância: medida para descrever o brilho percebido de uma cor
 
-tipos
+tipos de modelos de cores
 - aditivos (luz)
-	- misturada pela projeção da luz
+	- a adição de luz em diferentes comprimentos de onda gera a mistura
 	- exemplo: RGB, XYZ
 	- aplicação: monitore, projetores e TVs
 	
 - subtrativo (luz)
-	- misturada pela absorção da luz
+	- gerada pela absorção da luz em diferentes comprimentos de onda
 	- exemplo: CMY e CMYK
 	- aplicação: impressão e tinta
 
+### modelo RGB
 
-### Processamento de Imagens Coloridas
+é baseado em um sistema de coordenadas cartesianas, onde o espaço de cores é um cubo
 
-**transformaçõa de intensidades para cor**
-técninca atinge uma escala mais ampla de realce
+![[cubo rgb.png]]
+
+### modelo HSV ou HSB
+
+matiz (H, hue), saturação (S, saturation) e luminância (V, value - brilho, qtd de luz na mistura)
+
+é uma pirâmide de base hexagonal, representação gráfica:
+
+![[modelo hsv.png]]
+
+
+H está entre 0 e 360°
+
+S está entre 0 e 1 
+
+V entre 0 e 1
+
+### conversão de RGB para HSV
+
+$$
+H = 
+\begin{cases} 
+60 \frac{(G - B)}{(M - m)}, & \text{se } M = R \\
+60 \frac{(B - R)}{(M - m)} + 120, & \text{se } M = G \\
+60 \frac{(R - G)}{(M - m)} + 240, & \text{se } M = B
+\end{cases}
+$$
+
+$$
+S =
+\begin{cases}
+\frac{(M - m)}{M}, & \text{se } M = B
+0, & \text{caso contrário}
+\end{cases}
+$$
+$$
+V = \frac{M}{255}
+$$
+em que $m = min(R, G, B)$ e $M = max(R, G, B)$
+
+### modelo HSI
+
+definidos por: matiz (H), saturação (S) e intensidade (I - luminância)
+
+representação gráfica:
+![[modelo HSI.png]]
+
+variávies:
+- H entre 0 e 360°
+- S entre 0 e 1
+- intensidade entre 0 e 1 
+
+modelo de interesse em visão computacional
+![[exemplo HSI.png]]
+
+equalização do histograma (aplicado sobre o componente *i*)
+![[equalizacao hsi.png]]
 
 ---
 
+# aula 02
 ### OpenGL
 
+##### definição
+- é uma API para aplicações gráficas 2D e 3D
+- implementado em C
+- são rotinas de baixo nível
+
+##### pipeline
+- descreve um processo que pode ter dois ou mais passos distintos
+![[pipeline opengl.png]]
+
 #### morfologia das funções
+biblioteca + nome da função + número de variáveis + tipo de variáveis
 
 ### definições dos comandos
 

@@ -1,13 +1,13 @@
 
-## OpenGL
+### OpenGL - rasterização
 
-GL_POINTS 
+GL_POINTS -> cada vértice é um ponto
 
-GL_LINES
+GL_LINES -> cada par de vértices gera um segmento de linha independente
 
-GL_LINE_LOOP
+GL_LINE_LOOP -> desenha um grupo de segmentos de linhas, conectando o primeiro ao último vértice
 
-GL_LINE_STRIP
+GL_LINE_STRIP -> desenha um grupo de segmentos de linhas conectados do primeiro ao último vértice
 
 ---
 
