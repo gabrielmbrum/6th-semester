@@ -129,6 +129,8 @@ otmizam a exclusão mútua (se o hardware permitir)
 }
 ```
 
+#### outros elementos
+
 **execução sequencial**
 
 utilziada para o controle de laços de repetiçaõ

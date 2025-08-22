@@ -17,4 +17,8 @@ $média = (P + S +T)/3$
 
 23/10 - prova
 
-seminário - 30/10 06 e 13/11
+seminário - 30/10 | 06 e 13/11
+
+### otimização linear
+
+### llm
