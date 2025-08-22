@@ -12,9 +12,11 @@ int main(int argc, char *argv[]) {
         tid = omp_get_thread_num();
         printf("Thread %d: Hello, World!\n", tid);
 
-        if (tid == 0) {
+        #pragma omp master
+        {
             nthreads = omp_get_num_threads();
-            printf("Number of threads = %d\n", nthreads);
+            printf("Number of threads = %d\n", nthreads);   
         }
+        
     }
 }
